@@ -154,3 +154,45 @@ gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (dev)
 $ git reset --hard
 HEAD is now at cb5d1f5 Add about and home html file
 ```
+
+
+## Bundle 2
+
+### Exercises 1
+
+```bash
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (dev)
+$ git branch ft/bundle-2
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (dev)
+$ git switch ft/bundle-2 
+Switched to branch 'ft/bundle-2'
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/bundle-2)
+$ touch services.html
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/bundle-2)
+$ git add .
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/bundle-2)
+$ git commit -m "feat: add service html file"
+[ft/bundle-2 e744d77] feat: add service html file
+ 1 file changed, 11 insertions(+)
+ create mode 100644 services.html
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/bundle-2)
+$ git push origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 512 bytes | 512.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/gsngdavid/Gym-Git-Exercise-Solutions/pull/new/ft/bundle-2
+remote:
+To https://github.com/gsngdavid/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+
+```
