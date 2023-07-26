@@ -196,3 +196,135 @@ To https://github.com/gsngdavid/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 
 ```
+
+### Exercise 2
+
+```bash
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git branch
+  dev
+  ft/bundle-2
+* main
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (2/2), 712 bytes | 101.00 KiB/s, done.
+From https://github.com/gsngdavid/Gym-Git-Exercise-Solutions
+   35e2e78..1b7f8d9  main       -> origin/main
+Updating 35e2e78..1b7f8d9
+Fast-forward
+ about.html    | 11 +++++++++++
+ home.html     | 11 +++++++++++
+ services.html | 11 +++++++++++
+ 3 files changed, 33 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 services.html
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git branch ft/service-redesign
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git switch ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git add .
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git commit -m "feat: add a paragraph to the services.html"
+[ft/service-redesign 75f579b] feat: add a paragraph to the services.html
+ 1 file changed, 1 insertion(+)
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 361 bytes | 361.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/gsngdavid/Gym-Git-Exercise-Solutions/pull/new/ft/service-redesign   
+remote:
+To https://github.com/gsngdavid/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)      
+$ git add .
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)      
+$ git commit -m "feat: add paragraph to services.html"
+[main eff051b] feat: add paragraph to services.html
+ 1 file changed, 1 insertion(+)
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)      
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 360 bytes | 360.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/gsngdavid/Gym-Git-Exercise-Solutions.git
+   1b7f8d9..eff051b  main -> main
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)      
+$ git switch ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git diff main
+diff --git a/services.html b/services.html
+index bcb81ac..86c1ac0 100644
+--- a/services.html
++++ b/services.html
+@@ -7,6 +7,6 @@
+ </head>
+ <body>
+     <h1>This is services page</h1>
+-    <p>Changes to services.htm form main branch</p>
++    <p>This is some changes to services page.</p>
+ </body>
+ </html>
+\ No newline at end of file
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/service-redesign|MERGING)
+$ git add .
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/service-redesign|MERGING)
+$ git commit -m "feat: Resolve conflicts"
+[ft/service-redesign a3b8242] feat: Resolve conflicts
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git push origin ft/service-redesign 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 387 bytes | 387.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/gsngdavid/Gym-Git-Exercise-Solutions.git
+   75f579b..a3b8242  ft/service-redesign -> ft/service-redesign
+
+
+```
