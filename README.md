@@ -328,3 +328,175 @@ To https://github.com/gsngdavid/Gym-Git-Exercise-Solutions.git
 
 
 ```
+
+
+## Bundle 3
+
+### Exercise 1
+
+```bash
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git branch ft/team-page
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git switch ft/team-page
+Switched to branch 'ft/team-page'
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/team-page)
+$ touch team.html
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git add team.html
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git commit -m "feat: Add team page"
+[ft/team-page d43cd9e] feat: Add team page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git push origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 432 bytes | 432.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/gsngdavid/Gym-Git-Exercise-Solutions/pull/new/ft/team-page
+remote:
+To https://github.com/gsngdavid/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git branch ft/contact-page
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git switch ft/team-page
+Switched to branch 'ft/team-page'
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git log
+commit d43cd9e3c493c4c4484f5a78e4dd82ed5397e9a3 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: gsngdavid <gsngdavid@gmail.com>
+Date:   Thu Jul 27 11:00:50 2023 +0200
+
+    feat: Add team page
+
+commit 773b6de93831cd90f8bed8ac8b2f72fd7b978d8f (origin/main, main, ft/contact-page)
+Author: gsngdavid <gsngdavid@gmail.com>
+Date:   Wed Jul 26 13:02:30 2023 +0200
+
+    feat: Complete Bundler 2 | Exercise 2
+
+commit eff051ba81513e5222e689fe214b9ba4846c6568
+Author: gsngdavid <gsngdavid@gmail.com>
+Date:   Wed Jul 26 12:46:26 2023 +0200
+
+    feat: add paragraph to services.html
+
+commit 1b7f8d96053f268d556f39019b33e2b3dada3484
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git switch ft/contact-page
+Switched to branch 'ft/contact-page'
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git cherry-pick d43cd9e3c493c4c4484f5a78e4dd82ed5397e9a3
+[ft/contact-page b52e531] feat: Add team page
+ Date: Thu Jul 27 11:00:50 2023 +0200
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ touch contact.html
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git add .
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git commit -m "feat: Add contact page"
+[ft/contact-page 241f326] feat: Add contact page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 contact.html
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git push origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 694 bytes | 694.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/gsngdavid/Gym-Git-Exercise-Solutions/pull/new/ft/contact-page       
+remote:
+To https://github.com/gsngdavid/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git branch ft/faq-page
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git switch ft/faq-page
+Switched to branch 'ft/faq-page'
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ touch faq.hmtl
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ mv faq.hmtl faq.html
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git add .
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git commit -m "feat: Add faq page"
+[ft/faq-page d473f67] feat: Add faq page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git push origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 431 bytes | 431.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/gsngdavid/Gym-Git-Exercise-Solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/gsngdavid/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git revert d43cd9e3c493c4c4484f5a78e4dd82ed5397e9a3
+[ft/faq-page cb3164b] Revert "feat: Add team page"
+ 1 file changed, 11 deletions(-)
+ delete mode 100644 team.html
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git push origin ft/faq-page
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 275 bytes | 275.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/gsngdavid/Gym-Git-Exercise-Solutions.git
+   d473f67..cb3164b  ft/faq-page -> ft/faq-page
+
+```
