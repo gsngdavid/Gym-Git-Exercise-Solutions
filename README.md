@@ -500,3 +500,71 @@ To https://github.com/gsngdavid/Gym-Git-Exercise-Solutions.git
    d473f67..cb3164b  ft/faq-page -> ft/faq-page
 
 ```
+### Exercise 2
+
+```bash
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git switch ft/faq-page
+Switched to branch 'ft/faq-page'
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git branch ft/home-page-redesign
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/faq-page)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)      
+$ git add .
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)      
+$ git commit -m "feat: Add paragraph to home page"
+[main 0284cf5] feat: Add paragraph to home page
+ 1 file changed, 1 insertion(+)
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)      
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 359 bytes | 359.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/gsngdavid/Gym-Git-Exercise-Solutions.git
+   a5207bd..0284cf5  main -> main
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git switch ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git add .
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git commit -m "feat: Add interesting message to home page"
+[ft/home-page-redesign c95b43c] feat: Add interesting message to home page
+ 1 file changed, 1 insertion(+)
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git push origin ft/home-page-redesign
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 1.47 KiB | 754.00 KiB/s, done.
+Total 14 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/gsngdavid/Gym-Git-Exercise-Solutions/pull/new/ft/home-page-redesign 
+remote:
+To https://github.com/gsngdavid/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+
+```
