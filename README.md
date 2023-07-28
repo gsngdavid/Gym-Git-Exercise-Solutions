@@ -568,3 +568,50 @@ To https://github.com/gsngdavid/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
 
 ```
+
+
+## Bundle 4
+
+### Exercise 1
+
+```bash
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/home-page-redesign)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git remote add git-copy https://github.com/gsngdavid/Gym-Git-Exercise-Solutions-Copy.git
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git add .
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git commit -m "feat: Tech quote"
+[main 1ade78e] feat: Tech quote
+ 1 file changed, 1 insertion(+)
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 344 bytes | 344.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/gsngdavid/Gym-Git-Exercise-Solutions.git
+   0284cf5..1ade78e  main -> main
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git push git-copy main
+Enumerating objects: 39, done.
+Counting objects: 100% (39/39), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (37/37), done.
+Writing objects: 100% (39/39), 6.78 KiB | 3.39 MiB/s, done.
+Total 39 (delta 17), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (17/17), done.
+To https://github.com/gsngdavid/Gym-Git-Exercise-Solutions-Copy.git
+ * [new branch]      main -> main
+```
