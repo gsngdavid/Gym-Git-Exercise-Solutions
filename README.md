@@ -615,3 +615,77 @@ remote: Resolving deltas: 100% (17/17), done.
 To https://github.com/gsngdavid/Gym-Git-Exercise-Solutions-Copy.git
  * [new branch]      main -> main
 ```
+
+### Exercise 2
+
+```bash
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/footer)
+$ git add .
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/footer)
+$ git commit -m "feat: New paragraph"
+[ft/footer 2a70738] feat: New paragraph
+ 1 file changed, 6 insertions(+)
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/footer)
+$ git push origin ft/footer
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 573 bytes | 573.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/gsngdavid/Gym-Git-Exercise-Solutions/pull/new/ft/footer
+remote:
+To https://github.com/gsngdavid/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)      
+$ git branch ft/squashing
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (main)      
+$ git switch ft/squashing
+Switched to branch 'ft/squashing'
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git merge ft/footer --squash
+Updating 09fbd28..2a70738
+Fast-forward
+Squash commit -- not updating HEAD
+ about.html | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git commit -m "footer changes squashing"
+[ft/squashing c41cb45] footer changes squashing
+ 1 file changed, 6 insertions(+)
+
+gsngd@David MINGW64 ~/Documents/Gym-Git-Exercise-Solutions (ft/squashing)
+$ git push origin ft/squashing
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 572 bytes | 572.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/gsngdavid/Gym-Git-Exercise-Solutions/pull/new/ft/squashing
+remote:
+To https://github.com/gsngdavid/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+
+```
