@@ -736,3 +736,43 @@ To https://github.com/gsngdavid/git-cafe-exercise.git
    d1d3f9c..a153c50  main -> main
 
 ```
+
+
+## Bundle 5
+
+### Exercise 1
+
+```bash
+gsngd@David MINGW64 ~/Documents/git-cafe-exercise (main)
+$ git branch ft/menu
+
+gsngd@David MINGW64 ~/Documents/git-cafe-exercise (main)
+$ git switch ft/menu
+Switched to branch 'ft/menu'
+
+gsngd@David MINGW64 ~/Documents/git-cafe-exercise (ft/menu)
+$ git add .
+
+gsngd@David MINGW64 ~/Documents/git-cafe-exercise (ft/menu)
+$ git commit -m "feat: Add Menu.html"
+[ft/menu 3c20dd0] feat: Add Menu.html
+ 1 file changed, 11 insertions(+)
+ create mode 100644 Menu.html
+
+gsngd@David MINGW64 ~/Documents/git-cafe-exercise (ft/menu)
+$ git push origin ft/menu
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 469 bytes | 469.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/menu' on GitHub by visiting:
+remote:      https://github.com/gsngdavid/git-cafe-exercise/pull/new/ft/menu
+remote:
+To https://github.com/gsngdavid/git-cafe-exercise.git
+ * [new branch]      ft/menu -> ft/menu
+
+```
