@@ -903,3 +903,8 @@ To https://github.com/gsngdavid/git-cafe-exercise.git
  * [new branch]      hotfix -> hotfix
 
 ```
+### Exercise 4
+
+```bash
+DONE👍
+```
