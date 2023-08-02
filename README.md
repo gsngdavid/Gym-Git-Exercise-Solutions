@@ -862,3 +862,44 @@ To https://github.com/gsngdavid/git-cafe-exercise.git
  * [new branch]      bug-fix -> bug-fix
 
 ```
+
+### Exercise 3
+
+```bash
+gsngd@David MINGW64 ~/Documents/git-cafe-exercise (bug-fix)
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+gsngd@David MINGW64 ~/Documents/git-cafe-exercise (main)
+$ git branch hotfix
+
+gsngd@David MINGW64 ~/Documents/git-cafe-exercise (main)
+$ git switch hotfix
+Switched to branch 'hotfix'
+
+gsngd@David MINGW64 ~/Documents/git-cafe-exercise (hotfix)
+$ git add .
+
+gsngd@David MINGW64 ~/Documents/git-cafe-exercise (hotfix)
+$ git commit -m "fix: Change phone number"
+[hotfix f858998] fix: Change phone number
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+gsngd@David MINGW64 ~/Documents/git-cafe-exercise (hotfix)
+$ git push origin hotfix
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 298 bytes | 298.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'hotfix' on GitHub by visiting:
+remote:      https://github.com/gsngdavid/git-cafe-exercise/pull/new/hotfix
+remote:
+To https://github.com/gsngdavid/git-cafe-exercise.git
+ * [new branch]      hotfix -> hotfix
+
+```
